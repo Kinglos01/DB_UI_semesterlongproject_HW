@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.prefs.Preferences;
 
 public class UserSession {
-
-    private static UserSession instance;
+    //this allows all threads to see any changes made to user session
+    private static volatile UserSession instance;
 
     private String userName;
 
@@ -24,8 +24,8 @@ public class UserSession {
     }
 
 
-
-    public static UserSession getInstace(String userName,String password, String privileges) {
+    // added the synchronized keyword to not cause multiple threads to both start this method
+    public static synchronized UserSession getInstace(String userName,String password, String privileges) {
         if(instance == null) {
             instance = new UserSession(userName, password, privileges);
         }
@@ -33,11 +33,9 @@ public class UserSession {
     }
 
     public static UserSession getInstace(String userName,String password) {
-        if(instance == null) {
-            instance = new UserSession(userName, password, "NONE");
-        }
-        return instance;
+           return instance = new UserSession(userName, password, "NONE");
     }
+
     public String getUserName() {
         return this.userName;
     }

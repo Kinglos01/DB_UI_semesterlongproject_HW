@@ -12,7 +12,7 @@
 }
 
 .left_pane {
-    -fx-background-color: #a73;
+    -fx-background-color: lightblue;
     -fx-pref-width: 130px;
     -fx-pref-height: 600px;
 }
@@ -36,7 +36,7 @@
 }
 
 .text_field_pane {
-    -fx-background-color: #79dc05;
+    -fx-background-color: lightblue;
 
 }
 
@@ -104,4 +104,23 @@
 	-fx-background-insets: 1, 0, 0;
 	-fx-background-radius: 2em;
 
+}
+
+#importCSV{
+    -fx-background-color: #a73;
+}
+
+#exportCSVBtn{
+    -fx-background-color: #a73;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+
+}
+
+#rootpane{
+    -fx-background-color: lightblue;
+}
+
+#splashLable{
+    -fx-text-fill: orangered;
 }

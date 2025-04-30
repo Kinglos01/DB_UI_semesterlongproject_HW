@@ -123,3 +123,17 @@
 	-fx-background-radius: 2em;
 
 }
+
+#importCSV{
+    -fx-background-color:derive( #6622CC,90%);
+}
+
+#exportCSVBtn{
+    -fx-background-color: #555;
+    -fx-radius: 2;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #d5d5d5;
+}
